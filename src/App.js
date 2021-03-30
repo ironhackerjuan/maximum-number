@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+export class App {
+  maximunPossibleNumber5(number) {
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const stringNumber = String(number)
+    const numberStringArray = stringNumber.split("")
+    const newArray = []
+
+    for(let i = 0; i < stringNumber.length; i++) {
+      if(Number(stringNumber[i]) < 5) {
+        newArray.push('5')
+        break
+      } else {
+        return newArray.push(stringNumber[i])
+        continue
+      }
+    }
+
+    return Number(newArray.concat(stringNumber).join("")) 
+
+    // console.log(Number(numberStringArray))
+    // return Number(numberStringArray)
+
+  }
 }
 
-export default App;
+
+
+
+
+
+
+
+
+
+
+
+
+
